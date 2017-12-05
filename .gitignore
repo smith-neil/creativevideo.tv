@@ -1,0 +1,9 @@
+.DS_Store
+/shared
+/sql-dump-*.sql
+/db-sync
+/content/upgrade/
+
+local-config.php
+stage-config.php
+prod-config.php
