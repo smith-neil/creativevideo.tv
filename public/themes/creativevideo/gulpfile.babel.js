@@ -67,10 +67,10 @@ gulp.task('scss', () => {
   const DEST = path.resolve(ROOT_DIR, 'dist');
 
   return gulp.src(SRC)
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(concat('styles.css'))
     .pipe(sass({ outputStyle: 'nested' }))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(DEST))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cleanCss())
