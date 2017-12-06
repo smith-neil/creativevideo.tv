@@ -70,8 +70,7 @@ if ( !class_exists( 'vp' ) ) :
                     'not_found_in_trash' => __( 'No Videos found in Trash', 'vp' )
                 ),
                 'public' => true,
-                'menu_position' => 5,
-                'supports' => array('title')
+                'menu_position' => 5
             ) );
         }
 
