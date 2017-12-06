@@ -3,6 +3,9 @@
 /sql-dump-*.sql
 /db-sync
 /content/upgrade/
+**/package-lock.json
+**/node_modules/
+**/themes/creativevideo/dist
 
 local-config.php
 stage-config.php
