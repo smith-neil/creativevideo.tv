@@ -24,7 +24,7 @@ class vp {
     function initialize() {
         $this->settings = array(
             // basic
-            'name' => 'Video Portfolio',
+            'name' => __( 'Video Portfolio', 'vp' ),
             'version' => $this->version,
 
             // urls
