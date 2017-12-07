@@ -1,0 +1,9 @@
+// Media query that spans multiple breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $breakpoints) {
+    @include media-breakpoint-and-up($lower, $breakpoints) {
+      @include media-breakpoint-and-down($upper, $breakpoints) {
+        @content;
+      }
+    }
+  }
+  

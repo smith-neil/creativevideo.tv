@@ -1,0 +1,58 @@
+// Options
+$grid__enable-push: true !default;
+$grid__enable-pull: true !default;
+$grid__enable-offset: true !default;
+$grid__enable-gutters: true !default;
+$grid__column-count: 12 !default;
+
+// Colors
+$color__red:              #d31f44 !default;
+$color__background--dark: #293542 !default;
+
+$color__white: #ffffff !default;
+$color__gray: #EBEBEB !default;
+
+
+// Grid configuration
+$breakpoints: (
+    'xs': (
+      'query': '(max-width: 575px)',
+      'absolute_query': '(max-width: 575px)',
+      'min-width': 0,
+      'max-width': 575px,
+      'width': 100%,
+      'gutter': 4px
+    ),
+    'sm': (
+      'query': '(min-width: 576px)',
+      'absolute_query': '(min-width: 576px) and (max-width: 767px)',
+      'min-width': 576px,
+      'max-width': 767px,
+      'width': 540px,
+      'gutter': 10px
+    ),
+    'md': (
+      'query': '(min-width: 768px)',
+      'absolute_query': '(min-width: 768px) and (max-width: 991px)',
+      'min-width': 768px,
+      'max-width': 991px,
+      'width': 720px,
+      'gutter': 16px
+    ),
+    'lg': (
+      'query': '(min-width: 992px)',
+      'absolute_query': '(min-width: 992px) and (max-width: 1199px)',
+      'min-width': 992px,
+      'max-width': 1199px,
+      'width': 960px,
+      'gutter': 22px
+    ),
+    'xl': (
+      'query': '(min-width: 1200px)',
+      'absolute_query': '(min-width: 1200px)',
+      'min-width': 1200px,
+      'max-width': null,
+      'width': 1140px,
+      'gutter': 30px
+    )
+  );

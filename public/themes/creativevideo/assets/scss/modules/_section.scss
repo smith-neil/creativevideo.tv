@@ -1,0 +1,23 @@
+.section {
+    padding: 4rem 0;
+    border-bottom: 2px solid $color__gray;
+
+
+    &--centered {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__copy {
+        padding: 0 2rem;
+        text-align: justify;
+    }
+
+    &__container {
+        @include make-container();
+    }
+}

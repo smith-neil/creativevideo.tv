@@ -1,0 +1,53 @@
+@mixin make-grid($breakpoints: $breakpoints) {
+    @include clearfix();
+  }
+  
+  @mixin make-grid-item() {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+  
+    @include make-gutters();
+  }
+  
+  @mixin make-columns($breakpoints: $breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+      @include media-breakpoint-and-up($breakpoint) {
+        @include make-column($breakpoint);
+      }
+    }
+  }
+  
+  @mixin make-column($namespace: '') {
+    $classname: '.grid__item--' + $namespace + '-';
+    $push-classname: $classname + 'push-';
+    $pull-classname: $classname + 'pull-';
+    $offset-classname: $classname + 'offset-';
+  
+    @for $i from  1 through $grid__column-count {
+      $width: ($i / $grid__column-count) * 100%;
+  
+      #{$classname}#{$i} {
+        width: $width;
+      }
+  
+      @if $grid__enable-push {
+        #{$push-classname}#{$i} {
+          position: relative;
+          left: $width;
+        }
+      }
+      @if $grid__enable-pull {
+        #{$pull-classname}#{$i} {
+          position: relative;
+          right: $width;
+        }
+      }
+      @if $grid__enable-offset {
+        #{$offset-classname}#{$i} {
+          margin-left: $width;
+        }
+      }
+    }
+  }
+  

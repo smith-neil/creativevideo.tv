@@ -1,0 +1,17 @@
+// Returns the gutter-size of the given breakpoint by it's name
+@function breakpoint-gutter-size($name, $breakpoints: $breakpoints) {
+    @if $grid__enable-gutters == false {
+      @return 0px;
+    }
+    @else {
+      $breakpoint: map-get($breakpoints, $name);
+      $gutter-size: map-get($breakpoint, gutter);
+  
+      @if $gutter-size == null {
+        $gutter-size: '0px';
+      }
+  
+      @return $gutter-size;
+    }
+  }
+  

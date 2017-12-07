@@ -1,0 +1,14 @@
+// Media query for the given breakpoint and all breakpoints ABOVE the given breakpoint
+@mixin media-breakpoint-and-up($name, $breakpoins: $breakpoints) {
+    $min-width: breakpoint-min-width($name, $breakpoints);
+  
+    @if $min-width {
+      @media (min-width: $min-width) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+  

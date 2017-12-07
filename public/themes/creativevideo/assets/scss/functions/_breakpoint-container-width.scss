@@ -1,0 +1,8 @@
+// Returns the container-width of the given breakpoint by it's name
+@function breakpoint-container-width($name, $breakpoints: $breakpoints) {
+    $breakpoint: map-get($breakpoints, $name);
+    $container-width: map-get($breakpoint, container-width);
+  
+    @return $container-width;
+  }
+  

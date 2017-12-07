@@ -1,0 +1,14 @@
+// Media query for the given breakpoint and all breakpoints BELOW the given breakpoint
+@mixin media-breakpoint-and-down($name, $breakpoints: $breakpoints) {
+    $max-width: breakpoint-max-width($name, $breakpoints);
+  
+    @if $max-width {
+      @media (max-width: $max-width) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+  

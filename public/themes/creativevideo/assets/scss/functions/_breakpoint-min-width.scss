@@ -1,0 +1,13 @@
+// Returns the min-width of the given breakpoint by it's name
+@function breakpoint-min-width($name, $breakpoints: $breakpoints) {
+    $breakpoint: map-get($breakpoints, $name);
+    $min-width: map-get($breakpoint, min-width);
+  
+    @if $min-width {
+      @return $min-width;
+    }
+    @else {
+      @return 0;
+    }
+  }
+  

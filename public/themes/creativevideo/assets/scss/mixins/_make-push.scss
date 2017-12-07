@@ -1,0 +1,55 @@
+@mixin push-setup($namespace: "") {
+    $prefix: ".push--" + $namespace;
+  
+    #{$prefix}one-whole           { left:100%; }
+  
+    #{$prefix}one-half            { left:50%; }
+    #{$prefix}one-third           { left:33.333%; }
+    #{$prefix}two-thirds          { left:66.666%; }
+  
+    #{$prefix}one-quarter         { left:25%; }
+    #{$prefix}two-quarters        { @extend #{$prefix}one-half; }
+    #{$prefix}three-quarters      { left:75%; }
+  
+    #{$prefix}one-fifth           { left:20%; }
+    #{$prefix}two-fifths          { left:40%; }
+    #{$prefix}three-fifths        { left:60%; }
+    #{$prefix}four-fifths         { left:80%; }
+  
+    #{$prefix}one-sixth           { left:16.666%; }
+    #{$prefix}two-sixths          { @extend #{$prefix}one-third; }
+    #{$prefix}three-sixths        { @extend #{$prefix}one-half; }
+    #{$prefix}four-sixths         { @extend #{$prefix}two-thirds; }
+    #{$prefix}five-sixths         { left:83.333%; }
+  
+    #{$prefix}one-eighth          { left:12.5%; }
+    #{$prefix}two-eighths         { @extend #{$prefix}one-quarter; }
+    #{$prefix}three-eighths       { left:37.5%; }
+    #{$prefix}four-eighths        { @extend #{$prefix}one-half; }
+    #{$prefix}five-eighths        { left:62.5%; }
+    #{$prefix}six-eighths         { @extend #{$prefix}three-quarters; }
+    #{$prefix}seven-eighths       { left:87.5%; }
+  
+    #{$prefix}one-tenth           { left:10%; }
+    #{$prefix}two-tenths          { @extend #{$prefix}one-fifth; }
+    #{$prefix}three-tenths        { left:30%; }
+    #{$prefix}four-tenths         { @extend #{$prefix}two-fifths; }
+    #{$prefix}five-tenths         { @extend #{$prefix}one-half; }
+    #{$prefix}six-tenths          { @extend #{$prefix}three-fifths; }
+    #{$prefix}seven-tenths        { left:70%; }
+    #{$prefix}eight-tenths        { @extend #{$prefix}four-fifths; }
+    #{$prefix}nine-tenths         { left:90%; }
+  
+    #{$prefix}one-twelfth         { left:8.333%; }
+    #{$prefix}two-twelfths        { @extend #{$prefix}one-sixth; }
+    #{$prefix}three-twelfths      { @extend #{$prefix}one-quarter; }
+    #{$prefix}four-twelfths       { @extend #{$prefix}one-third; }
+    #{$prefix}five-twelfths       { left:41.666%; }
+    #{$prefix}six-twelfths        { @extend #{$prefix}one-half; }
+    #{$prefix}seven-twelfths      { left:58.333%; }
+    #{$prefix}eight-twelfths      { @extend #{$prefix}two-thirds; }
+    #{$prefix}nine-twelfths       { @extend #{$prefix}three-quarters; }
+    #{$prefix}ten-twelfths        { @extend #{$prefix}five-sixths; }
+    #{$prefix}eleven-twelfths     { left:91.666%; }
+  }
+  

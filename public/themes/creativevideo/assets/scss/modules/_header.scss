@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    &__video-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+        background-color: #3B414D;
+    }
+
+    &__nav-container {
+        width: 100%;
+        height: 10%;
+        background-color: $color__background--dark;
+    }
+
+    &__nav {
+        height: 100%;
+
+        @include make-container();
+    }
+}

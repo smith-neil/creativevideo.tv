@@ -43,10 +43,13 @@ header,
 hgroup,
 main,
 menu,
-nav,
 section,
 summary {
   display: block;
+}
+
+nav {
+  display: inline-block;
 }
 
 // 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.

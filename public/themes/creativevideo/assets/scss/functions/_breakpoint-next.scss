@@ -1,0 +1,7 @@
+// Returns the next breakpoint or 'null' if given the last breakpoint
+@function breakpoint-next($name, $breakpoints: $breakpoints) {
+    $n: index($breakpoints, $name);
+  
+    @return if ($n < length($breakpoints), nth($breakpoints, $n + 1), null);
+  }
+  

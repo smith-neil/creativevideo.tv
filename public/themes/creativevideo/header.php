@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>  class="no-js no-svg">
+<html <?php language_attributes(); ?> class="no-js no-svg">
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +11,14 @@
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-    <link rel="icon" href="<?php echo get_template_directory_uri() . '/dist/icon/favicon.ico' ?>" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
-
     <?php wp_head(); ?>
   </head>
   <body <?php body_class( 'site' ); ?>>
-    
+    <header class="header">
+      <?php 
+      if ( is_front_page() ) {
+        get_template_part( 'partials/header/header-video' );
+      }
+      get_template_part( 'partials/header/header-nav' );
+      ?>
+    </header>

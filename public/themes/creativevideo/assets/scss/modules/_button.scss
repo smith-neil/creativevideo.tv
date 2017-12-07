@@ -1,0 +1,14 @@
+.button {
+    &--lg {
+        padding: 1.25rem 3rem;
+    }
+
+    &--primary {
+        color: $color__white;
+        background-color: $color__red;
+    }
+
+    &:focus {
+        outline: 0; 
+    }
+}

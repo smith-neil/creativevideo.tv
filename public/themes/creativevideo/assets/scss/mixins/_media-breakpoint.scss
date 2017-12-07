@@ -1,0 +1,22 @@
+// Media query between the give breakpoint's min and max widths
+@mixin media-breakpoint($name, $breakpoints: $breakpoints) {
+    $min-width: breakpoint-min-width($name, $breakpoints);
+    $max-width: breakpoint-max-width($name, $breakpoints);
+  
+    @if $min-width and $max-width {
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+      }
+    }
+    @else if $min-width and $max-width == null {
+      @media (min-width: $min-width) {
+        @content;
+      }
+    }
+    @else if $min-width == null and $max-width {
+      @media (max-width: $max-width) {
+        @content;
+      }
+    }
+  }
+  

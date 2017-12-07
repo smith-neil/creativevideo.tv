@@ -1,0 +1,13 @@
+.block {
+    
+
+    &--centered {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 62%;
+        height: auto;
+        border: 2px solid $color__gray;
+    }
+}

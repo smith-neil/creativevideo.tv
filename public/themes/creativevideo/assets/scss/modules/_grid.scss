@@ -1,0 +1,45 @@
+.container {
+    @include make-container();
+  }
+  
+  .container-fluid {
+    @include make-fluid-container();
+  }
+  
+  .grid {
+    @include make-grid();
+  
+    &--gutterless {
+      > .grid__row {
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      .grid__item,
+      [class*="grid__item"] {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  
+    &--fixed {
+      position: fixed;
+    }
+    &--fixed-top {
+      position: relative;
+    }
+    &--fixed-bottom {
+      position: absolute;
+    }
+  }
+  
+  .grid__row {
+    @include make-row();
+  }
+  
+  .grid__item {
+    @include make-grid-item();
+  }
+  
+  @include make-columns();
+  

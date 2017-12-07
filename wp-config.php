@@ -19,12 +19,6 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'DB_HOST', '%%DB_HOST%%' );
 }
 
-// ========================
-// Custom Content Directory
-// ========================
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/public' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/public' );
-
 // ================================================
 // You almost certainly do not want to change these
 // ================================================

@@ -1,0 +1,39 @@
+@mixin make-container($breakpoints: $breakpoints) {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  
+    @each $breakpoint in map-keys($breakpoints) {
+      @include media-breakpoint-and-up($breakpoint) {
+        $map: map-get($breakpoints, $breakpoint);
+        $container-width: map-get($map, width);
+  
+        width: $container-width;
+        max-width: 100%;
+      }
+    }
+  }
+  
+  @mixin make-fluid-container($breakpoints: $breakpoints) {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  @mixin make-row() {
+    @include clearfix();
+  
+    @if $grid__enable-gutters {
+      @each $breakpoint in map-keys($breakpoints) {
+        @include media-breakpoint-and-up($breakpoint) {
+          $gutter: breakpoint-gutter-size($breakpoint);
+  
+          margin-left: -($gutter / 2);
+          margin-right: -($gutter / 2);
+        }
+      }
+    }
+  }
+  

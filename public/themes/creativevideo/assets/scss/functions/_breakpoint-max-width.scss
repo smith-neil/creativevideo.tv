@@ -1,0 +1,10 @@
+// Returns the max-width of the given breakpoint by it's name
+@function breakpoint-max-width($name, $breakpoints: $breakpoints) {
+    $breakpoint: map-get($breakpoints, $name);
+    $max-width: map-get($breakpoint, max-width);
+  
+    @if $max-width {
+      @return $max-width;
+    }
+  }
+  
