@@ -1,0 +1,9 @@
+.social-icon-link {
+    color: $color__gray--dark;
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+
+    &:hover {
+        color: $color__red;
+    }
+}
