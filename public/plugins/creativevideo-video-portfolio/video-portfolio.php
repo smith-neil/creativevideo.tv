@@ -70,6 +70,7 @@ class vp {
                 'not_found'          => __( 'No Videos found', 'vp' ),
                 'not_found_in_trash' => __( 'No Videos found in Trash', 'vp' )
             ),
+            'taxonomies' => array( 'category' ),
             'public' => true,
             'menu_position' => 5
         ) );
